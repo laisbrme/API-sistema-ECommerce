@@ -14,49 +14,53 @@ Este projeto tem como objetivo principal o desenvolvimento de uma API para um si
 
 ## Tecnologias utilizadas
 
-* Java: Linguagem de programação principal.
-* Spring Boot: Framework para desenvolvimento de aplicações Java.
-* Spring Data JPA: Framework para acesso a dados, simplificando a interação com o banco de dados.
-* Maven: Ferramenta de gerenciamento de build e dependências.
-* PostgreSQL: Sistema de gerenciamento de banco de dados relacional.
+- **Java:** Linguagem de programação principal.
+- **Spring Boot:** Framework para desenvolvimento de aplicações Java.
+- **Spring Data JPA:** Framework para acesso a dados, simplificando a interação com o banco de dados.
+- **Maven:** Ferramenta de gerenciamento de build e dependências.
+- **PostgreSQL:** Sistema de gerenciamento de banco de dados relacional.
 
 ## Endpoints Disponíveis
 
-* Produtos:
-   - Listar todos os produtos
-   - Obter um produto por ID
-   - Criar um novo produto
-   - Atualizar um produto
-   - Deletar um produto
- 
-* Categorias:
-   - Listar todas as categorias
-   - Obter uma categoria por ID
-   - Criar uma nova categoria
-   - Atualizar uma categoria
-   - Deletar uma categoria
-   - Consultar uma lista de produtos vinculada a uma categoria.
+- **Produtos:**
 
-* Clientes:
-   - Listar todos os clientes
-   - Obter um cliente por ID
-   - Criar um novo cliente
-   - Atualizar um cliente
-   - Deletar um cliente
-   - Todo cliente pode ter muitos endereços.
+  - Listar todos os produtos
+  - Obter um produto por ID
+  - Criar um novo produto
+  - Atualizar um produto
+  - Deletar um produto
 
-* Endereços:
-   - Listar todos os endereços
-   - Obter um endereço por ID
-   - Criar um novo endereço
-   - Atualizar um endereço
-   - Deletar um endereço
+- **Categorias:**
+
+  - Listar todas as categorias
+  - Obter uma categoria por ID
+  - Criar uma nova categoria
+  - Atualizar uma categoria
+  - Deletar uma categoria
+  - Consultar uma lista de produtos vinculada a uma categoria.
+
+- **Clientes:**
+
+  - Listar todos os clientes
+  - Obter um cliente por ID
+  - Criar um novo cliente
+  - Atualizar um cliente
+  - Deletar um cliente
+  - Todo cliente pode ter muitos endereços.
+
+- **Endereços:**
+  - Listar todos os endereços
+  - Obter um endereço por ID
+  - Criar um novo endereço
+  - Atualizar um endereço
+  - Deletar um endereço
 
 ## Apresentação
 
 O vídeo apresenta a API do sistema de ECommerce e demonstra a comunicação com o banco de dados no pgAdmin, ferramenta gráfica para administração do PostgreSQL.
 
 [Link para o vídeo de apresentação em breve]
+
 <!-- [![Watch the video](https://img.youtube.com/vi/WKR7pHkXfps/hqdefault.jpg)]( https://youtu.be/WKR7pHkXfps) -->
 
 ## Colaboradores
