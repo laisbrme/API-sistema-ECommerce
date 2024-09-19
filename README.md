@@ -66,4 +66,4 @@ Este projeto foi desenvolvido graças aos
 
 <a href="https://github.com/laisbrme"><img src="https://avatars.githubusercontent.com/u/52614305?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
 <a href="https://github.com/RhaisaJusto"><img src="https://avatars.githubusercontent.com/u/163946245?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
-<a href="https://github.com/laisbrme"><img src="https://avatars.githubusercontent.com/u/163802559?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
+<a href="https://github.com/leonardopontes91"><img src="https://avatars.githubusercontent.com/u/163802559?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
