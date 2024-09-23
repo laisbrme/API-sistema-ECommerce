@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/endereco
+
+###
+POST http://localhost:8080/api/endereco
+Content-Type: application/json
+
+{
+	"cep" : "cep_teste",
+	"rua" : "rua_teste",
+	"numero" : "numero_teste",
+	"bairro" : "bairro_teste",
+	"cidade" : "cidade_teste",
+	"complemento" : "complemento_teste"
+}

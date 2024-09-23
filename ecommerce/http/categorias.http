@@ -1,0 +1,10 @@
+GET http://localhost:8080/api/categoria
+
+###
+POST http://localhost:8080/api/categoria
+Content-Type: application/json
+
+{
+    "nome" : "Livros",
+    "descricao" : "Categoria de livros"
+}
