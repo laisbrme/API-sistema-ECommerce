@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.edu.unifaa.ecommerce.model.Categoria;
 import br.edu.unifaa.ecommerce.model.Endereco;
-import br.edu.unifaa.ecommerce.service.CategoriaService;
 import br.edu.unifaa.ecommerce.service.EnderecoService;
 
 @CrossOrigin("*")
