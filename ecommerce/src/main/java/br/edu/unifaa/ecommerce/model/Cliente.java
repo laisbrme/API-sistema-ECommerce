@@ -3,13 +3,30 @@ package br.edu.unifaa.ecommerce.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Cliente {
    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCliente")
     private long id;
+
+    @Column(nullable = false)
     private String nome;
+
+    @Column(nullable = false, unique = true)
     private String cpf;
+
+    @Column(nullable = false, unique = true)
     private String email;
     private String telefone;
+    
     private List<Endereco> enderecos;
     
     // Construtores
