@@ -4,12 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    // id
-	// nome
-	// cpf
-	// email
-	// telefone
-	// enderecos [endereco]
+   
     private long id;
     private String nome;
     private String cpf;
