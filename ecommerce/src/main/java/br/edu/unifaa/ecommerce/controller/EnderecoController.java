@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,32 +28,36 @@ public class EnderecoController {
     private EnderecoService enderecoService;
 
     @GetMapping
-    public List<Endereco> obterTodos(){
+    public ResponseEntity<List<Endereco>> obterTodos(){
 
-        return enderecoService.obterTodos();
+        return ResponseEntity.ok(enderecoService.obterTodos());
     }
 
     @GetMapping("/{id}")
-    public Optional<Endereco> obterPorId(@PathVariable Long id){
+    public ResponseEntity<Optional<Endereco>> obterPorId(@PathVariable Long id){
 
-        return enderecoService.obterPorId(id);
+        return ResponseEntity.ok(enderecoService.obterPorId(id));
     }
 
     @PostMapping 
-    public Endereco adicionar(@RequestBody Endereco endereco){
+    public ResponseEntity<Endereco> adicionar(@RequestBody Endereco endereco){
 
-        return enderecoService.adicionar(endereco);
+        var enderecoCriado = enderecoService.adicionar(endereco);
+
+        return new ResponseEntity<>(enderecoCriado, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    public Endereco atualizar(@PathVariable Long id, @RequestBody Endereco endereco){
+    public ResponseEntity<Endereco> atualizar(@PathVariable Long id, @RequestBody Endereco endereco){
         
-        return enderecoService.atualizar(id, endereco);
+        return ResponseEntity.ok(enderecoService.atualizar(id, endereco));
     }
 
     @DeleteMapping("/{id}")
-    public void deletar(@PathVariable Long id){
+    public ResponseEntity<?> deletar(@PathVariable Long id){
         
         enderecoService.deletar(id);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT); 
     }
 }
