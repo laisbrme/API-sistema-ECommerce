@@ -2,10 +2,7 @@ package br.edu.unifaa.ecommerce.service;
 
 import br.edu.unifaa.ecommerce.model.Categoria;
 import br.edu.unifaa.ecommerce.repository.CategoriaRepository;
-import br.edu.unifaa.ecommerce.model.exception.ResourceBadRequestException;
-import br.edu.unifaa.ecommerce.model.exception.ResourceNotFoundException;
 
-import org.apache.el.stream.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +29,7 @@ public class CategoriaService {
 
     public Optional<Categoria> obterPorId(Long id){
 
-        Optional<Categoria> categoriaLocalizado =  categoriaRepository.findById(id);
+        Optional<Categoria> categoriaLocalizado = categoriaRepository.findById(id);
     
         if (categoriaLocalizado.isEmpty()) {
             throw new InputMismatchException("Não foi encontrado categoria com id: " + id);
