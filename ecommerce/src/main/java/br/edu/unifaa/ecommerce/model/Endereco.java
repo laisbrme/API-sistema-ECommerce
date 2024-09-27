@@ -1,10 +1,15 @@
 package br.edu.unifaa.ecommerce.model;
 
+import java.util.List;
+
+// import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Endereco {
@@ -31,6 +36,11 @@ public class Endereco {
     
     private String complemento;
 
+    @OneToMany(mappedBy = "enderecos")
+    // ! Remover o comentário caso necessário
+    // @JsonBackReference
+    private List<Cliente> clientes;
+
     // Construtores
     public Endereco() {
     }
@@ -45,6 +55,14 @@ public class Endereco {
     }
 
     // Getters e Setters
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
+    }
+
     public long getId() {
         return id;
     }

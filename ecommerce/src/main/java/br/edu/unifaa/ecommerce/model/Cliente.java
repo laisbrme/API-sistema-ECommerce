@@ -8,6 +8,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Cliente {
@@ -27,7 +30,13 @@ public class Cliente {
     private String email;
     private String telefone;
     
-    private List<Endereco> enderecos;
+    @OneToMany
+    @JoinTable(
+        name = "cliente_endereco",
+        joinColumns = @JoinColumn(name = "idCliente"),
+        inverseJoinColumns = @JoinColumn(name = "idEndereco")  // InverseJoinColumns relaciona a coluna idEndereco na entidade Endereco com a coluna idCliente na entidade Cliente
+    )  // OneToMany com a entidade Endereco, relacionada com a coluna idCliente na entidade Cliente
+    private List<Endereco> enderecos; // Many
     
     // Construtores
     public Cliente() {
@@ -49,7 +58,6 @@ public class Cliente {
         this.telefone = telefone;
         this.enderecos = enderecos;
     }
-
 
     // Getters and Setters
     public long getId() {
