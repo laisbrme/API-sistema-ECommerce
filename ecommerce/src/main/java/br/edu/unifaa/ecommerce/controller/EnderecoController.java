@@ -21,7 +21,7 @@ import br.edu.unifaa.ecommerce.service.EnderecoService;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/api/endereco")
+@RequestMapping("/api/enderecos")
 public class EnderecoController {
 
     @Autowired

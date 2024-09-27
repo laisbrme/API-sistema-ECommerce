@@ -1,0 +1,45 @@
+### Obter todos
+GET http://localhost:8080/api/clientes
+
+### Obter por id
+GET http://localhost:8080/api/clientes/2
+
+### Adicionar
+POST http://localhost:8080/api/clientes
+Content-Type: application/json
+
+{
+    "nome" : "nome_teste",
+    "cpf" : "cpf_teste",
+    "email" : "email_teste",
+    "telefone" : "telefone_teste",
+    "enderecos" : [
+        {
+            "rua" : "rua_teste",
+            "numero" : "numero_teste",
+            "complemento" : "complemento_teste",
+        }
+    ]
+}
+
+### Atualizar
+PUT http://localhost:8080/api/clientes/1
+Content-Type: application/json
+
+{
+    "nome" : "nome_teste",
+    "cpf" : "cpf_teste",
+    "email" : "email_teste",
+    "telefone" : "telefone_teste",
+    "enderecos" : [
+        {
+            "id" : 1,
+            "rua" : "rua_teste",
+            "numero" : "numero_teste",
+            "complemento" : "complemento_teste",
+        }
+    ]
+}
+
+### Deletar
+DELETE http://localhost:8080/api/clientes/2
