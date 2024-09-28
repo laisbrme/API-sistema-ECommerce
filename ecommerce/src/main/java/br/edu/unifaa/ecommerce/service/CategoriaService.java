@@ -1,12 +1,14 @@
 package br.edu.unifaa.ecommerce.service;
 
 import br.edu.unifaa.ecommerce.model.Categoria;
+import br.edu.unifaa.ecommerce.model.exception.ResourceNotFoundException;
+import br.edu.unifaa.ecommerce.model.exception.ResourceBadRequestException;
 import br.edu.unifaa.ecommerce.repository.CategoriaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.InputMismatchException;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -32,7 +34,7 @@ public class CategoriaService {
         Optional<Categoria> categoriaLocalizado = categoriaRepository.findById(id);
     
         if (categoriaLocalizado.isEmpty()) {
-            throw new InputMismatchException("Não foi encontrado categoria com id: " + id);
+            throw new ResourceNotFoundException("Não foi encontrado categoria com id: " + id);
         }
 
         return categoriaLocalizado;
