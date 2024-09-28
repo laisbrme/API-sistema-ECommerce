@@ -8,3 +8,24 @@ Content-Type: application/json
     "nome" : "Livros",
     "descricao" : "Categoria de livros"
 }
+
+###
+POST http://localhost:8080/api/categoria
+Content-Type: application/json
+
+{
+    "nome" : "Eletrônicos",
+    "descricao" : "Categoria de eletrônicos"
+}
+
+###
+PUT http://localhost:8080/api/categoria/1
+Content-Type: application/json
+
+{
+    "nome" : "Livros",
+    "descricao" : "Categoria de livros ATUALIZADO"
+}
+
+###
+DELETE http://localhost:8080/api/categoria/3

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,33 +30,35 @@ public class CategoriaController {
     private CategoriaService categoriaService;
 
     @GetMapping
-    public List<Categoria> obterTodos(){
+    public ResponseEntity <List<Categoria>> obterTodos(){
 
-        return categoriaService.obterTodos();
+        return ResponseEntity.ok (categoriaService.obterTodos());
     }
 
     @GetMapping("/{id}")
-    public Optional <Categoria> obterPorId(@PathVariable Long id){
+    public ResponseEntity <Optional <Categoria>> obterPorId(@PathVariable Long id){
 
-        return categoriaService.obterPorId(id);
+        return ResponseEntity.ok (categoriaService.obterPorId(id));
     }
 
     @PostMapping 
-    public Categoria adicionar(@RequestBody Categoria categoria){
-
-        return categoriaService.adicionar(categoria);
+    public ResponseEntity <Categoria> adicionar(@RequestBody Categoria categoria){
+        var categoriaCriado = categoriaService.adicionar (categoria);
+        return new ResponseEntity <> (categoriaCriado, HttpStatus.CREATED);
     }
 
     @PutMapping ("/{id}")
-    public Categoria atualizar( @PathVariable long id, @RequestBody Categoria categoria){
+    public ResponseEntity <Categoria> atualizar( @PathVariable long id, @RequestBody Categoria categoria){
 
-        return categoriaService.atualizar(id, categoria);
+        return ResponseEntity.ok (categoriaService.atualizar(id, categoria));
     }
 
     @DeleteMapping ("/{id}")
-    public void deletar (@PathVariable Long id){
+    public ResponseEntity<?> deletar (@PathVariable Long id){
 
        categoriaService.deletar(id);
+
+       return new ResponseEntity<> (HttpStatus.NO_CONTENT);
     }
 
 
