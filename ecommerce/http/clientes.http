@@ -9,37 +9,26 @@ POST http://localhost:8080/api/clientes
 Content-Type: application/json
 
 {
-    "nome" : "nome_teste",
-    "cpf" : "cpf_teste",
-    "email" : "email_teste",
-    "telefone" : "telefone_teste",
-    "enderecos" : [
-        {
-            "rua" : "rua_teste",
-            "numero" : "numero_teste",
-            "complemento" : "complemento_teste",
-        }
-    ]
+    "nome" : "nome_teste3",
+    "cpf" : "cpf_teste3",
+    "email" : "email_teste3",
+    "telefone" : "telefone_teste3",
 }
 
 ### Atualizar
-PUT http://localhost:8080/api/clientes/1
+PUT http://localhost:8080/api/clientes/2
 Content-Type: application/json
 
 {
-    "nome" : "nome_teste",
-    "cpf" : "cpf_teste",
-    "email" : "email_teste",
-    "telefone" : "telefone_teste",
-    "enderecos" : [
-        {
-            "id" : 1,
-            "rua" : "rua_teste",
-            "numero" : "numero_teste",
-            "complemento" : "complemento_teste",
-        }
+    "nome": "cliente 2 atualizado",
+    "cpf": "cpf_teste2",
+    "email": "email_teste2",
+    "telefone": "telefone_teste2",
+    "enderecos": [
+        { "id" : 4 },
+        { "id" : 5 }
     ]
 }
 
 ### Deletar
-DELETE http://localhost:8080/api/clientes/2
+DELETE http://localhost:8080/api/clientes/3

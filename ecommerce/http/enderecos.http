@@ -1,34 +1,34 @@
 ### Obter todos
-GET http://localhost:8080/api/endereco
+GET http://localhost:8080/api/enderecos
 
 ### Obter por id
-GET http://localhost:8080/api/endereco/2
+GET http://localhost:8080/api/enderecos/2
 
 ### Adicionar
-POST http://localhost:8080/api/endereco
+POST http://localhost:8080/api/enderecos
 Content-Type: application/json
 
 {
-	"cep" : "cep_teste",
-	"rua" : "rua_teste",
-	"numero" : 123,
-	"bairro" : "bairro_teste",
-	"cidade" : "cidade_teste",
-	"complemento" : "PARA DELETAR"
+	"cep" : "cep_teste5",
+	"rua" : "rua_teste5",
+	"numero" : 555,
+	"bairro" : "bairro_teste5",
+	"cidade" : "cidade_teste5",
+	"complemento" : "endereco do cliente 2"
 }
 
 ### Atualizar
-PUT http://localhost:8080/api/endereco/1
+PUT http://localhost:8080/api/enderecos/2
 Content-Type: application/json
 
 {
-	"cep" : "cep_teste_atualizado",
-	"rua" : "rua_teste",
-	"numero" : 123,
-	"bairro" : "bairro_teste",
-	"cidade" : "cidade_teste",
-	"complemento" : "complemento_teste"
+	"cep" : "cep_teste2",
+	"rua" : "rua_teste2",
+	"numero" : 22222,
+	"bairro" : "bairro_teste2",
+	"cidade" : "cidade_teste2",
+	"complemento" : "endereco do cliente 1"
 }
 
 ### Deletar
-DELETE http://localhost:8080/api/endereco/2
+DELETE http://localhost:8080/api/enderecos/3

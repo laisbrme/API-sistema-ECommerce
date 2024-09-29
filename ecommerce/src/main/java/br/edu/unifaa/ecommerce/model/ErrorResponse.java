@@ -40,6 +40,4 @@ public class ErrorResponse {
     public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
     }
-
-    
 }

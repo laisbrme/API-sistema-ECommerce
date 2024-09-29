@@ -2,7 +2,7 @@ package br.edu.unifaa.ecommerce.model;
 
 import java.util.List;
 
-// import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -37,8 +37,7 @@ public class Endereco {
     private String complemento;
 
     @OneToMany(mappedBy = "enderecos")
-    // ! Remover o comentário caso necessário
-    // @JsonBackReference
+    @JsonBackReference
     private List<Cliente> clientes;
 
     // Construtores
