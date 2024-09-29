@@ -1,0 +1,31 @@
+GET http://localhost:8080/api/produto
+
+###
+POST http://localhost:8080/api/produto
+Content-Type: application/json
+
+{
+    "nome" : "Harry Potter",
+    "descricao" : "O bruxo mais famoso"
+}
+
+###
+POST http://localhost:8080/api/produto
+Content-Type: application/json
+
+{
+    "nome" : "Harry Potter 2",
+    "descricao" : "O segundo livro da saga"
+}
+
+###
+PUT http://localhost:8080/api/produto
+Content-Type: application/json
+
+{
+    "nome" : "Harry Potter",
+    "descricao" : "O segundo livro da saga em PT BR"
+}
+
+###
+DELETE http://localhost:8080/api/produto

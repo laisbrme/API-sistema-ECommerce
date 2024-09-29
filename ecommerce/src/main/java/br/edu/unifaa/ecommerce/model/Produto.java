@@ -4,14 +4,38 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+// import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Produto {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "idProduto")
     private long id;
+    
+    @Column (nullable = false)
     private String nome;
+    
+    @Column(nullable = false)
     private double valor;
+    
+    @Column(nullable = false)
     private int quantidadeEstoque;
+    
+    @Column(nullable = false)
     private Date dataCadastro;
+    
+    // @JsonBackReference
     private List<Categoria> categorias;
+    
+    @Column (nullable = false, columnDefinition = "TEXT")
     private String observacao;
 
     // Construtores

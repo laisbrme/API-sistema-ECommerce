@@ -2,7 +2,7 @@ package br.edu.unifaa.ecommerce.service;
 
 import br.edu.unifaa.ecommerce.model.Categoria;
 import br.edu.unifaa.ecommerce.model.exception.ResourceNotFoundException;
-import br.edu.unifaa.ecommerce.model.exception.ResourceBadRequestException;
+
 import br.edu.unifaa.ecommerce.repository.CategoriaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
