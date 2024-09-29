@@ -5,7 +5,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
+//many to one
 @Entity
 public class Categoria {
 
@@ -20,6 +23,24 @@ public class Categoria {
     @Column (nullable = false, columnDefinition = "TEXT")
     private String descricao;
 
+
+
+
+
+
+
+
+    //ADICIONADO DE ACORDO COM CHATGPT 
+    @ManyToOne
+    @JoinColumn(name = "IdProduto", nullable = false)
+    private Produto produto;
+
+    
+    
+    
+    
+    
+    
     // Construtores
     public Categoria() {
     }

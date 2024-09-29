@@ -5,8 +5,14 @@ POST http://localhost:8080/api/produto
 Content-Type: application/json
 
 {
+    
+    "dataCadastro" : "2025-09-16T20:00:00",
     "nome" : "Harry Potter",
-    "descricao" : "O bruxo mais famoso"
+    "observacao" : "O bruxo mais famoso",
+    "quantidadeEstoque" : 9,
+    "valor" : 49.99,
+    "categoria" : "Livros"
+
 }
 
 ###
@@ -14,18 +20,27 @@ POST http://localhost:8080/api/produto
 Content-Type: application/json
 
 {
-    "nome" : "Harry Potter 2",
-    "descricao" : "O segundo livro da saga"
+
+    "dataCadastro" : "2027-10-25T20:00:00",
+    "nome" : "Harry Potter 2 ",
+    "observacao" : "O segundo livro da saga",
+    "valor" : 59.99,
+    "categoria" : "Livros",
+    "quantidadeEstoque" : 11
 }
 
 ###
-PUT http://localhost:8080/api/produto
+PUT http://localhost:8080/api/produto/2
 Content-Type: application/json
 
 {
-    "nome" : "Harry Potter",
-    "descricao" : "O segundo livro da saga em PT BR"
+    "dataCadastro" : "2027-12-12T20:00:00",
+    "nome" : "Harry Potter 2 ",
+    "observacao" : "O segundo livro da saga agora em PT BR",
+    "valor" : 59.99,
+    "categoria" : "Livros",
+    "quantidadeEstoque" : 11
 }
 
 ###
-DELETE http://localhost:8080/api/produto
+DELETE http://localhost:8080/api/produto/6

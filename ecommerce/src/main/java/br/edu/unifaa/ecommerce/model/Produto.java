@@ -11,7 +11,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.OneToMany;
+// one to many
 @Entity
 public class Produto {
     
@@ -32,8 +33,26 @@ public class Produto {
     @Column(nullable = false)
     private Date dataCadastro;
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    //ADICIONADO DE ACORDO COM CHAT GPT
+    @OneToMany (mappedBy = "produto")
     // @JsonBackReference
     private List<Categoria> categorias;
+    
+    
+    
+    
+    
+    
     
     @Column (nullable = false, columnDefinition = "TEXT")
     private String observacao;
