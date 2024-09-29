@@ -1,5 +1,6 @@
 package br.edu.unifaa.ecommerce.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -9,9 +10,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
-//many to one
 @Entity
 public class Categoria {
 
@@ -23,14 +23,15 @@ public class Categoria {
     @Column (nullable = false)
     private String nome;
     
-    @Column (nullable = false, columnDefinition = "TEXT")
+    @Column (columnDefinition = "TEXT")
     private String descricao;
 
-    @ManyToOne
+    // Através da categoria busca-se a lista de produtos
+    @OneToMany
     @JoinTable(
         name = "categoria_produto",
-        joinColumns = @JoinColumn(name = "idProduto"),
-        inverseJoinColumns = @JoinColumn(name = "idCategoria")
+        joinColumns = @JoinColumn(name = "idCategoria"),
+        inverseJoinColumns = @JoinColumn(name = "idProduto")
     )  // id da categoria no relacionamento de um para muitos
     private List<Produto> produto;
 
@@ -42,6 +43,14 @@ public class Categoria {
     public Categoria(String nome, String descricao) {
         this.nome = nome;
         this.descricao = descricao;
+
+        this.produto = new ArrayList<Produto>();
+    }
+
+    public Categoria(String nome, String descricao, List<Produto> produto) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.produto = produto;
     }
 
     // Getters e Setters

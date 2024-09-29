@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 
 @Entity
@@ -33,15 +33,11 @@ public class Produto {
     @Column(nullable = false)
     private Date dataCadastro;
 
-    @OneToMany
-    @JoinTable(
-        name = "categoria_produto",
-        joinColumns = @JoinColumn(name = "idProduto"),
-        inverseJoinColumns = @JoinColumn(name = "idCategoria")
-    )  // id da categoria no relacionamento de um para muitos
+    @OneToMany(mappedBy = "produto")
+    @JsonBackReference
     private List<Categoria> categorias;
     
-    @Column (nullable = false, columnDefinition = "TEXT")
+    @Column (columnDefinition = "TEXT")
     private String observacao;
 
 
