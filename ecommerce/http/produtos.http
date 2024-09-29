@@ -1,46 +1,47 @@
-GET http://localhost:8080/api/produto
+### Obter todos
+GET http://localhost:8080/api/produtos
 
-###
-POST http://localhost:8080/api/produto
+### Obter por id
+GET http://localhost:8080/api/produtos/1
+
+### Adicionar 1
+POST http://localhost:8080/api/produtos
 Content-Type: application/json
 
 {
-    
+    "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+    "nome": "Acer Nitro 5",
+    "observacao": "Core i5, RAM 8GB, Nvidia GeForce GTX 1050",
+    "quantidadeEstoque": 5,
+    "valor": 3700.0
+}
+
+### Adicionar 2
+POST http://localhost:8080/api/produtos
+Content-Type: application/json
+
+{
     "dataCadastro" : "2025-09-16T20:00:00",
-    "nome" : "Harry Potter",
-    "observacao" : "O bruxo mais famoso",
-    "quantidadeEstoque" : 9,
-    "valor" : 49.99,
-    "categoria" : "Livros"
-
+    "nome" : "Nokia",
+    "observacao" : "Tijoção",
+    "quantidadeEstoque" : 1,
+    "valor" : 100.00
 }
 
-###
-POST http://localhost:8080/api/produto
+### Atualizar
+PUT http://localhost:8080/api/produtos/1
 Content-Type: application/json
 
 {
-
-    "dataCadastro" : "2027-10-25T20:00:00",
-    "nome" : "Harry Potter 2 ",
-    "observacao" : "O segundo livro da saga",
-    "valor" : 59.99,
-    "categoria" : "Livros",
-    "quantidadeEstoque" : 11
+    "dataCadastro": "2025-09-16T20:00:00.000+00:00",
+    "nome": "Acer Nitro 5",
+    "observacao": "Core i5, RAM 8GB, Nvidia GeForce GTX 1050",
+    "quantidadeEstoque": 5,
+    "valor": 3700.0,
+    "categoria": [
+        { "id": 1 }
+    ]
 }
 
-###
-PUT http://localhost:8080/api/produto/2
-Content-Type: application/json
-
-{
-    "dataCadastro" : "2027-12-12T20:00:00",
-    "nome" : "Harry Potter 2 ",
-    "observacao" : "O segundo livro da saga agora em PT BR",
-    "valor" : 59.99,
-    "categoria" : "Livros",
-    "quantidadeEstoque" : 11
-}
-
-###
-DELETE http://localhost:8080/api/produto/6
+### Deletar
+DELETE http://localhost:8080/api/produtos/3

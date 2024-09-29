@@ -54,14 +54,6 @@ public class Endereco {
     }
 
     // Getters e Setters
-    public List<Cliente> getClientes() {
-        return clientes;
-    }
-
-    public void setClientes(List<Cliente> clientes) {
-        this.clientes = clientes;
-    }
-
     public long getId() {
         return id;
     }
@@ -103,5 +95,11 @@ public class Endereco {
     }
     public void setComplemento(String complemento) {
         this.complemento = complemento;
+    }
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+    public void setClientes(List<Cliente> clientes) {
+        this.clientes = clientes;
     }
 }

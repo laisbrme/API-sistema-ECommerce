@@ -12,7 +12,7 @@ Content-Type: application/json
     "nome" : "nome_teste3",
     "cpf" : "cpf_teste3",
     "email" : "email_teste3",
-    "telefone" : "telefone_teste3",
+    "telefone" : "telefone_teste3"
 }
 
 ### Atualizar
