@@ -1,38 +1,38 @@
-# Obter todos
+### ! Obter todos
 GET http://localhost:8080/api/categorias
 
-### Obter por id
-GET http://localhost:8080/api/categorias/1
+### ! Obter por id
+GET http://localhost:8080/api/categorias/3
 
-### Adicionar 1
+### ! Adicionar 1
 POST http://localhost:8080/api/categorias
 Content-Type: application/json
 
+# {
+#     "nome" : "Notebook",
+#     "descricao" : "Categoria de Notebook"
+# },
+# {
+#     "nome" : "Celular",
+#     "descricao" : "Categoria de Celular"
+# },
 {
-    "nome" : "Celular",
-    "descricao" : "Categoria de celular"
+    "nome" : "Livro",
+    "descricao" : "Categoria de Livro"
 }
 
-### Adicionar 2
-POST http://localhost:8080/api/categorias
+### ! Atualizar
+PUT http://localhost:8080/api/categorias/3
 Content-Type: application/json
 
 {
-    "nome" : "Eletrônicos",
-    "descricao" : "Categoria de eletrônicos"
-}
-
-### Atualizar
-PUT http://localhost:8080/api/categorias/1
-Content-Type: application/json
-
-{
-    "nome": "Notebook",
-    "descricao": "Categoria de notebook",
-    "produto": [
-        { "id": 1 }
+    "nome" : "Livro",
+    "descricao" : "Categoria de Livro",
+    "produto" : [
+        { "id" : 1 },
+        { "id" : 2 }
     ]
 }
 
-### Deletar
+### ! Deletar
 DELETE http://localhost:8080/api/categorias/2
