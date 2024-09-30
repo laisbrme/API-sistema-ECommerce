@@ -6,7 +6,7 @@ Atividade avaliativa para a disciplina Back-End Developer - Conhecendo Banco de 
 
 ## Status do Projeto
 
-> Status: em desenvolvimento.
+> Status: Concluido.
 
 ## Objetivo
 
@@ -59,9 +59,7 @@ Este projeto tem como objetivo principal o desenvolvimento de uma API para um si
 
 O vídeo apresenta a API do sistema de ECommerce e demonstra a comunicação com o banco de dados no pgAdmin, ferramenta gráfica para administração do PostgreSQL.
 
-[Link para o vídeo de apresentação em breve]
-
-<!-- [![Watch the video](https://img.youtube.com/vi/WKR7pHkXfps/hqdefault.jpg)]( https://youtu.be/WKR7pHkXfps) -->
+[![Watch the video](https://img.youtube.com/vi/LFtSqPSo4L0/hqdefault.jpg)](https://youtu.be/LFtSqPSo4L0)
 
 ## Colaboradores
 
@@ -70,4 +68,3 @@ Este projeto foi desenvolvido graças aos
 
 <a href="https://github.com/laisbrme"><img src="https://avatars.githubusercontent.com/u/52614305?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
 <a href="https://github.com/RhaisaJusto"><img src="https://avatars.githubusercontent.com/u/163946245?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
-<a href="https://github.com/leonardopontes91"><img src="https://avatars.githubusercontent.com/u/163802559?s=64&v=4" height="50" style="border-radius: 50px;" /> </a>
