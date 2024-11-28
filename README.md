@@ -10,7 +10,7 @@ Atividade avaliativa para a disciplina Back-End Developer - Conhecendo Banco de 
 
 ## Objetivo
 
-Este projeto tem como objetivo principal o desenvolvimento de uma API para um sistema de ECommerce.
+Este projeto consiste no desenvolvimento de uma API para um sistema de e-commerce, com o objetivo de facilitar a gestão de produtos, categorias, clientes e endereços. A API foi projetada para ser robusta e escalável, utilizando tecnologias como Java e Spring Boot para garantir desempenho e modularidade, além do PostgreSQL para o gerenciamento dos dados. O sistema oferece endpoints que permitem operações de CRUD (criar, ler, atualizar e deletar) em cada entidade, proporcionando flexibilidade para integrações futuras e customizações conforme as necessidades do negócio.
 
 ## Tecnologias utilizadas
 
